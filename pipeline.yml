@@ -2,6 +2,7 @@
 resources:
   - name: concourse-examples
     type: git
+    icon: github
     source:
       uri: https://github.com/kharandziuk/concourse-docker
 
