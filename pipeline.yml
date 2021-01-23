@@ -14,4 +14,4 @@ jobs:
       - get: concourse-examples
         trigger: true
       - set_pipeline: set-pipelines
-        file: ./pipeline.yml
+        file: concourse-examples/pipeline.yml
