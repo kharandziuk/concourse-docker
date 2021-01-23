@@ -1,0 +1,17 @@
+---
+resources:
+  - name: concourse-examples
+    type: git
+    source:
+      uri: https://github.com/kharandziuk/concourse-docker
+
+
+jobs:
+  # update this pipeline before updating child pipelines
+  - name: set-self
+    public: true
+    plan:
+      - get: concourse-examples
+        trigger: true
+      - set_pipeline: set-pipelines
+        file: pipeline.yml
